@@ -50,7 +50,7 @@ const weapon = [  //all items from the shop as objects
   { name: "Sir, yes sir!",
     price: 20000,
     image: "gun1.png",
-    new: true,
+    new: false,
     owned: false,
     tooExpensive: false,
     inCart: false
@@ -74,7 +74,7 @@ const weapon = [  //all items from the shop as objects
   { name: "Vengance",
     price: 700,
     image: "gun1.png",
-    new: true,
+    new: false,
     owned: false,
     tooExpensive: false,
     inCart: false
@@ -106,7 +106,7 @@ const weapon = [  //all items from the shop as objects
   { name: "Deamon hit",
     price: 6100,
     image: "gun1.png",
-    new: true,
+    new: false,
     owned: false,
     tooExpensive: false,
     inCart: false
@@ -178,7 +178,7 @@ const weapon = [  //all items from the shop as objects
   { name: "X-Files",
     price: 1000,
     image: "gun1.png",
-    new: true,
+    new: false,
     owned: false,
     tooExpensive: false,
     inCart: false
@@ -186,7 +186,7 @@ const weapon = [  //all items from the shop as objects
   { name: "Mr. President",
     price: 300,
     image: "gun1.png",
-    new: true,
+    new: false,
     owned: false,
     tooExpensive: false,
     inCart: false
