@@ -388,23 +388,25 @@ function clickInCart(e) { //function to deal when item was clicked inside cart
   weapon.forEach(item => {
     if (item.name === e.srcElement.firstChild.textContent) { //compare names
       item.inCart = false; //set inCart to false
+      price = item.price;
     }
   });
-  playerMoney += price; // return the money
-  removeFromCart(e); //get item out of the cart
-  expensive(weapon); // Check what player can afford now
-  displayShop(); //and display it all after corrections
+  playerMoney += price; //return player's money
+  removeFromCart(e); //get item out of cart
+  expensive(weapon); // check what player can now afford
+  displayShop(); // display after changes
 }
 
 //Event listeners
-gunsDisplay.addEventListener("click", function(event) { //player clicked on shop items
+//when player clicks on gun in the shop
+gunsDisplay.addEventListener("click", function(event) {
   addToCart(event);
 });
-
-totalPrice.addEventListener("click", function(){ //player clicked on 'buy for' button in the cart
+//when player clicks 'buy for' button in cart
+totalPrice.addEventListener("click", function(){
   purchase();
 });
-
-gunCart.addEventListener("click", function(event) { //player clicked on item inside cart
+//when player clicks on gun in the cart
+gunCart.addEventListener("click", function(event) {
   clickInCart(event);
-})
+});
