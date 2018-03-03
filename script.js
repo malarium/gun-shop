@@ -204,7 +204,7 @@ let total = 0; //initial value of total shopping
 
 
 money.textContent = playerMoney;
-gunsAmountInCart.textContent = howManyInCart + " items in the cart";
+gunsAmountInCart.textContent = howManyInCart + " items in cart";
 totalPrice.textContent = "Buy for "+ total;
 
 //Check which elements is weapon array are too expensive
