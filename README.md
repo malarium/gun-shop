@@ -8,3 +8,5 @@ At the beginning of the JS code there is an array of objects - just add another 
 It should be read from some database, but it's just a sample, hence items are hardcoded in JS.
 
 ***
+
+Works so far on Chrome and Opera. Will add Fiorefox shortly.
