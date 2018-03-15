@@ -204,11 +204,11 @@ let total = 0; //initial value of total shopping
 
 
 money.textContent = playerMoney;
-gunsAmountInCart.textContent = howManyInCart + " items in cart";
+gunsAmountInCart.textContent = howManyInCart + " items in the cart";
 totalPrice.textContent = "Buy for "+ total;
 
 //Check which elements is weapon array are too expensive
-function expensive(weapon) {
+const expensive = weapon => {
   weapon.filter(item => {
     let numberOfItem = weapon.indexOf(item); //numberOfItem is now the number of chosen element from weapon array
     if (item.price > playerMoney) {
@@ -220,7 +220,7 @@ function expensive(weapon) {
 }
 expensive(weapon);
 // Function that dynamically creates items for display based on objects' values stored in 'weapon' variable
-const createGun = function(weapon) {
+const createGun = weapon => {
   let gun = document.createElement("div"); //create another gun item for display
   gun.classList.add("gunItem");            // use the styles
   gun.style.background = "darkgrey center no-repeat"; //get image of the gun
@@ -268,14 +268,14 @@ const createGun = function(weapon) {
 };
 
 //make all items in shop appear
-function displayShop () {
+const displayShop = () => {
   gunsDisplay.innerHTML = "";
   weapon.forEach (item => createGun(item));
 }
 displayShop();
 
 //function to create gun image in Cart
-const createGunInCart = function(weapon) {
+const createGunInCart = weapon => {
   let gunToBuy = document.createElement("div");
   gunToBuy.classList.add("itemInCart");
 
@@ -297,12 +297,12 @@ const createGunInCart = function(weapon) {
   gunCart.appendChild(gunToBuy);
 };
 
-function updateCartInfo() { //function that displays info on number of items in cart
+const updateCartInfo = () => { //function that displays info on number of items in cart
   howManyInCart === 1 ? gunsAmountInCart.textContent = howManyInCart + " item in cart" : gunsAmountInCart.textContent = howManyInCart + " items in cart"; //grammar matters ;)
   money.textContent = playerMoney; //update player's money
 }
 
-function removeFromCart(e) { //callback function called in addToCart if price === 'in Cart'
+const removeFromCart = e => { //callback function called in addToCart if price === 'in Cart'
   let name = e.srcElement.firstChild.innerText || e.srcElement.firstChild.textContent; // this is the name of gun in cart clicked again (Chrome and Opera)
   let elem = gunCart.querySelectorAll(".itemInCart"); //compare names
   elem.forEach(one => {
@@ -319,7 +319,7 @@ function removeFromCart(e) { //callback function called in addToCart if price ==
 }
 
 //function that adds and removes items to/from cart on click
-function addToCart(e) {
+const addToCart = e => {
   let gunName = e.srcElement.firstChild.innerText;
   let gunPrice = e.srcElement.lastChild.innerText;
   let numberOfItem = 0;
@@ -364,7 +364,7 @@ function addToCart(e) {
   }
 }
 
-function purchase() {
+const purchase = () => {
   //clear the cart
   while (gunCart.firstChild) {
     gunCart.removeChild(gunCart.firstChild);
@@ -384,7 +384,7 @@ function purchase() {
   displayShop();
 }
 
-function clickInCart(e) { //function to deal when item was clicked inside cart
+const clickInCart = e => { //function to deal when item was clicked inside cart
   let price = 0;
   weapon.forEach(item => {
     if (item.name === e.srcElement.firstChild.textContent) { //compare names
