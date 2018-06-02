@@ -239,7 +239,7 @@ const createGun = weapon => {
   }
 
   let gunPrice = document.createElement("p"); //create element for item's price
-  if (`${weapon.owned}`) {  //check for additional conditions (inCart, tooExpensive or Owned) CHANGED === 'true'
+  if (`${weapon.owned}` === 'true') {  //check for additional conditions (inCart, tooExpensive or Owned) CHANGED === 'true'
     gunPrice.textContent = "Owned";
     gunPrice.style.backgroundColor = "darkslateblue";
     gunName.style.backgroundColor = "darkslateblue";
