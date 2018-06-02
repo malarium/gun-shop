@@ -234,13 +234,13 @@ const createGun = weapon => {
   let gunNew = document.createElement("p"); //create 'new' element
   gunNew.textContent = "New";
   gunNew.classList.add("new");
-  if (`${weapon.new}`) {  // display new when actually new CHANGED === 'true'
+  if (`${weapon.new}`==='true') {  // display new when actually new
     console.log(`${weapon.new}`);
     gunNew.style.display = "block";
   }
 
   let gunPrice = document.createElement("p"); //create element for item's price
-  if (`${weapon.owned}` === 'true') {  //check for additional conditions (inCart, tooExpensive or Owned) CHANGED === 'true'
+  if (`${weapon.owned}` === 'true') {  //check for additional conditions (inCart, tooExpensive or Owned)
     gunPrice.textContent = "Owned";
     gunPrice.style.backgroundColor = "darkslateblue";
     gunName.style.backgroundColor = "darkslateblue";
