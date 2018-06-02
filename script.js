@@ -235,6 +235,7 @@ const createGun = weapon => {
   gunNew.textContent = "New";
   gunNew.classList.add("new");
   if (`${weapon.new}`=== 'true') {  // display new when actually new
+    console.log(`${weapon.new}`);
     gunNew.style.display = "block";
   }
 
