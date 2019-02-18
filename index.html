@@ -5,7 +5,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>PCF</title>
-  <meta name="author" content="Marcin Górecki"/>
+  <meta name="author" content="Marcin Górecki"/>  
+  <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCiMwYzNYTahICHhlCGDVqyqbhl6aLTxWc",
+    authDomain: "gun-shop-235a4.firebaseapp.com",
+    databaseURL: "https://gun-shop-235a4.firebaseio.com",
+    projectId: "gun-shop-235a4",
+    storageBucket: "gun-shop-235a4.appspot.com",
+    messagingSenderId: "939972969230"
+  };
+  firebase.initializeApp(config);
+</script>
   <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
 </head>
@@ -25,18 +38,5 @@
     <p id="totalPrice"></p>
     </div>
   </section>
-  <script src="https://www.gstatic.com/firebasejs/5.8.3/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCquajUeRSID2ZDwor_D8fPp7hi-aiaRYs",
-    authDomain: "gun-shop-41c15.firebaseapp.com",
-    databaseURL: "https://gun-shop-41c15.firebaseio.com",
-    projectId: "gun-shop-41c15",
-    storageBucket: "gun-shop-41c15.appspot.com",
-    messagingSenderId: "1084337412482"
-  };
-  firebase.initializeApp(config);
-</script>
   <script src="script.js"></script>
 </body>
