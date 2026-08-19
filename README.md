@@ -9,4 +9,4 @@ It should be read from some database, but it's just a sample, hence items are ha
 
 ***
 
-Works so far on Chrome and Opera. Will add Fiorefox shortly.
+Works so far on Chrome and Opera. Did not check Firefox.
